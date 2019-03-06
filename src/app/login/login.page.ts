@@ -12,7 +12,9 @@ export class LoginPage implements OnInit {
   student_id:string;
   student_password:string;
   
-  
+  onForget(){
+    this._router.navigate(['/forgetpass'])
+  }
   
   
   

@@ -20,6 +20,9 @@ export class StudentfrontdisplayPage implements OnInit {
   onMyProfile(){
     this._route.navigate(['/studentpersonaldetails']);
   }
+  onFees(){
+    this._route.navigate(['/fees']);
+  }
   ngOnInit() {
  this.student_id=localStorage.getItem('student_id')
     this._ser.getstudentFront(this.student_id).subscribe(

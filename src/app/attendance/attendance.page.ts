@@ -41,12 +41,11 @@ calendar={
                 this.y=parseInt(this.dt.substring(0,4));
                 this.m=parseInt(this.dt.substr(5,2));
                 console.log('month'+this.m);
-                
                 this.d=parseInt(this.dt.substr(8,2));
                 console.log('date'+this.d);
                
                 console.log(data[i].attendance_date);
-                this.events.push({
+                  this.events.push({
                     title: data[i].attendance_status,
                     startTime: new Date(this.y,(this.m)-1,(this.d)+1,12,30,5,4),
                     endTime:new Date(this.y,(this.m)-1,(this.d)+1,13,30,5,4) ,

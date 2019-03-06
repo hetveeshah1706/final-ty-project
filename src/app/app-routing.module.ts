@@ -25,7 +25,14 @@ const routes: Routes = [
   { path: 'footer', loadChildren: './footer/footer.module#FooterPageModule' },
   { path: 'notice', loadChildren: './notice/notice.module#NoticePageModule' },
   { path: 'notice-discreption/:notice_id', loadChildren: './notice-discreption/notice-discreption.module#NoticeDiscreptionPageModule' },
-  { path: 'studentpersonaldetails', loadChildren: './studentpersonaldetails/studentpersonaldetails.module#StudentpersonaldetailsPageModule' }
+  { path: 'studentpersonaldetails', loadChildren: './studentpersonaldetails/studentpersonaldetails.module#StudentpersonaldetailsPageModule' },
+  { path: 'cal', loadChildren: './cal/cal.module#CalPageModule' },
+  { path: 'changepass', loadChildren: './changepass/changepass.module#ChangepassPageModule' },
+  { path: 'forgetpass', loadChildren: './forgetpass/forgetpass.module#ForgetpassPageModule' },
+  { path: 'fees', loadChildren: './fees/fees.module#FeesPageModule' },
+  { path: 'totalfees', loadChildren: './totalfees/totalfees.module#TotalfeesPageModule' },
+  { path: 'remainingfees', loadChildren: './remainingfees/remainingfees.module#RemainingfeesPageModule' },
+  { path: 'editprofile', loadChildren: './editprofile/editprofile.module#EditprofilePageModule' }
 ];
 
 @NgModule({

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>remainingfees</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <table border="3" >
+        <th>date</th>
+  
+        <th>amount</th>
+  
+  
+        <tr *ngFor="let item of arr">
+        <td>{{item.fees_date | date:"dd/MM/yyyy"}}</td>
+  
+        <td>{{item.amount}}</td>
+  
+  
+        </tr>
+        </table>
+  
+</ion-content>
