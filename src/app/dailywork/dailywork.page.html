@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>dailywork</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button *ngFor="let item of subject_arr" (click)="onDailyWork(item.subject_id)">{{item.subject_name}}</ion-button>
+</ion-content>

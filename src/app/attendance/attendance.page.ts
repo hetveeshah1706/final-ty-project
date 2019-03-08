@@ -28,7 +28,9 @@ calendar={
   loadEvents() {
     this.eventSource = this.createRandomEvents();
 }
-  ngOnInit() {
+  ngOnInit() 
+  {
+
     this.student_id=localStorage.getItem('student_id');
     this._ser.onStudentAttendance(this.student_id).subscribe(
         (data:any[])=>{

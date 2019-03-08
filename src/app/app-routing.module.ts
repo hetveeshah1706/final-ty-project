@@ -32,7 +32,12 @@ const routes: Routes = [
   { path: 'fees', loadChildren: './fees/fees.module#FeesPageModule' },
   { path: 'totalfees', loadChildren: './totalfees/totalfees.module#TotalfeesPageModule' },
   { path: 'remainingfees', loadChildren: './remainingfees/remainingfees.module#RemainingfeesPageModule' },
-  { path: 'editprofile', loadChildren: './editprofile/editprofile.module#EditprofilePageModule' }
+  { path: 'editprofile', loadChildren: './editprofile/editprofile.module#EditprofilePageModule' },
+  { path: 'dailywork', loadChildren: './dailywork/dailywork.module#DailyworkPageModule' },
+  { path: 'dailysubjectdisplay/:subject_id', loadChildren: './dailysubjectdisplay/dailysubjectdisplay.module#DailysubjectdisplayPageModule' },
+  { path: 'pdf-open/:pdf', loadChildren: './pdf-open/pdf-open.module#PdfOpenPageModule' },
+  
+
 ];
 
 @NgModule({

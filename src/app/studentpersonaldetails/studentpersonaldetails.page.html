@@ -102,29 +102,35 @@
     </div>
   </div> -->
 
-  <img [src]="student_image" alt="..." >
+  <img src="http://localhost:3000/images/student_profile/{{student_image}}/" alt="..." >
   <ion-card>
-        <!-- <ion-card-content>
-                STUDENT NAME: {{student_name}}
-               </ion-card-content> -->
+        
                <ion-label>
                    <h3> STUDENT NAME: {{student_name}}</h3>
                </ion-label><br>
+
+               <ion-label>
+                    <h3> STUDENT PASSWORD: {{student_password}}</h3>
+                </ion-label><br>
                <ion-label>
                    <h3> STANDARD: {{standard_no}}</h3>
                </ion-label><br>
                <ion-label>
-                    <h3> DOB: {{date_of_birth}}</h3>
+                    <h3> DOB: {{date_of_birth | date:"MM/dd/yyyy"}}</h3>
                 </ion-label>
       </ion-card>
       <ion-card>
-          <ion-label><h3>BATCH NAME::{{batch_name}}</h3></ion-label>
-          <ion-label><h3>SUBJECT:{{subject_name}}</h3></ion-label>
+          <ion-label><h3>BATCH NAME::{{batch_name}}</h3></ion-label><br>
+          <ion-label>ADOPTED SUBJECT:<h3 *ngFor="let item of subject_arr">{{item.subject_name}}</h3></ion-label><br>
+          <ion-label><h3>JOINING DATE:{{joining_date | date:"MM/dd/yyyy"}}</h3></ion-label><br>
       </ion-card>
+    
+
+
       
       
       
-        
+      <ion-button (click)="onEditProfile()">Edit profile</ion-button>
       
       
     </ion-content>

@@ -9,6 +9,7 @@ import { FeesService } from '../fees.service';
 export class TotalfeesPage implements OnInit {
 student_id:string;
 total_fees:number;
+paid_amount:number;
 student_name:string;
   constructor(private _ser:FeesService) { }
 
@@ -19,6 +20,7 @@ student_name:string;
       (data:any)=>{
         this.total_fees=data[0].total_fees;
         this.student_name=data[0].student_name;
+        this.paid_amount=data[0].paid_amount;
         console.log(data);
       }
     )

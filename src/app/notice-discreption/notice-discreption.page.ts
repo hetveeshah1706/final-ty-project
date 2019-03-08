@@ -19,6 +19,7 @@ notice_arr:[]=[];
     this.notice_id=this._actroute.snapshot.params['notice_id'];
     this._ser.getNoticeById(this.notice_id).subscribe(
       (data:any[])=>{
+        console.log(data);
         this.notice_desc=data[0].notice_desc;
         this.batch_name=data[0].batch_name;
         this.notice_name=data[0].notice_name;
