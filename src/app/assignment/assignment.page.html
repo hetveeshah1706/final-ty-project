@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">ASSIGNMENT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-content padding>
+    <ion-button *ngFor="let item of subject_arr" (click)="onAssignment(item.subject_id)">{{item.subject_name}}</ion-button>
+  </ion-content>
+</ion-content>

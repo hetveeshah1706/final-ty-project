@@ -36,6 +36,9 @@ const routes: Routes = [
   { path: 'dailywork', loadChildren: './dailywork/dailywork.module#DailyworkPageModule' },
   { path: 'dailysubjectdisplay/:subject_id', loadChildren: './dailysubjectdisplay/dailysubjectdisplay.module#DailysubjectdisplayPageModule' },
   { path: 'pdf-open/:pdf', loadChildren: './pdf-open/pdf-open.module#PdfOpenPageModule' },
+  { path: 'assignment', loadChildren: './assignment/assignment.module#AssignmentPageModule' },
+  { path: 'assignmentdisplay/:subject_id', loadChildren: './assignmentdisplay/assignmentdisplay.module#AssignmentdisplayPageModule' },
+
   
 
 ];

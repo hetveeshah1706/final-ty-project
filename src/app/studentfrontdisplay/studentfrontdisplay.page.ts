@@ -36,6 +36,9 @@ constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,pu
   {
     this._route.navigate(['/dailywork']);
   }
+  onAssignment(){
+    this._route.navigate(['/assignment']);
+  }
 
   ngOnInit() 
   {

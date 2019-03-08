@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ASSIGNMENT DISPLAY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-content padding  overflow-scroll="true">
+  <div *ngFor="let item of display_arr" >
+    <!-- <ion-label>DATE:{{item.daily_date | date:"MM/dd/yyyy"}}</ion-label> -->
+    <!-- <img src="http://localhost:3000/images/dailywork/{{item.image}}" alt="..."><br> -->
+    <div class="a">
+      <a href="http://localhost:3000/images/assignment/{{item.assignment_pdf}}" target="_blank">SUBMISSION-DATE:{{item.submisson_date | date:"MM/dd/yyyy"}}<br>TITLE:{{item.title}}</a>
+    </div>
+</div>
+</ion-content>
