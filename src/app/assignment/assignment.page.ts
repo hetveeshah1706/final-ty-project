@@ -9,17 +9,17 @@ import { assignment_class } from './assignment_class';
   styleUrls: ['./assignment.page.scss'],
 })
 export class AssignmentPage implements OnInit {
-  student_id:string;
+  student_id:number;
   subject_arr:assignment_class[]=[];
   constructor(public _ser:AssignmentService,public _route:Router) { }
   onAssignment(subject_id){
     this._route.navigate(['/assignmentdisplay',subject_id]);
   }
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     console.log(this.student_id);
     this._ser.getAssignmentSubject(this.student_id).subscribe(
-      (data:assignment_class[])=>{
+      (data:any[])=>{
         this.subject_arr=data;
       }
     );    

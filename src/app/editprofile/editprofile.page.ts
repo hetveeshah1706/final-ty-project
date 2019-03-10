@@ -9,7 +9,7 @@ import { editprofile } from './editprofile';
   styleUrls: ['./editprofile.page.scss'],
 })
 export class EditprofilePage implements OnInit {
-student_id:string;
+student_id:number;
 student_name:string;
 student_image:string;
 date_of_birth:Date;
@@ -62,7 +62,7 @@ onUpdate()
   constructor(private _ser:StudentfrontdisplayserService,public _route:Router) { }
 
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     this._ser.getStudentById(this.student_id).subscribe(
     (data:any)=>{
       this.student_name=data[0].student_name;

@@ -12,7 +12,7 @@ export class StudentpersonaldetailsPage implements OnInit {
   student_name:string;
   student_password:string;
   student_image:string;
-  student_id:string;
+  student_id:number;
   standard_no:number;
   date_of_birth:string;
   batch_name:string;
@@ -26,9 +26,10 @@ export class StudentpersonaldetailsPage implements OnInit {
   constructor(public _ser:StudentfrontdisplayserService,private _router:Router) { }
 
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id')
+    this.student_id=parseInt(localStorage.getItem('student_id'))
     this._ser.getstudentFront(this.student_id).subscribe(
       (data:any[])=>{
+        console.log(data);
         this.student_image=data[0].student_image;
         this.student_password=data[0].student_password;
         this.student_name=data[0].student_name;

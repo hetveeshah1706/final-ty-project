@@ -1,6 +1,6 @@
 export class assignment_class{
     constructor(
-        public student_id?:string,
+        public student_id?:number,
        public student_password?:string,
        public student_name?:string,
        public student_image?:string,
@@ -17,6 +17,6 @@ export class assignment_class{
         public fk_batch_id?:number,
         public title?:string,
         public submisson_date?:Date,
-        public fk_student_id?:string
+        public fk_student_id?:number
     ){}
 }

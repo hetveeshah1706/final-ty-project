@@ -9,11 +9,11 @@ import { FeesService } from '../fees.service';
 })
 export class RemainingfeesPage implements OnInit {
   arr:fees_detail;
-  student_id:string
+  student_id:number;
   constructor(private _ser:FeesService) { }
 
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     this._ser.onremainingfees(this.student_id).subscribe(
       (data:any)=>{
         this.arr=data;

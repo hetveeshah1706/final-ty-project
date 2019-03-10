@@ -7,11 +7,11 @@
     
         <ion-content padding  overflow-scroll="true">
 
-        <div *ngFor="let item of display_arr" >
+        <div *ngFor="let item of display_arr">
     <!-- <ion-label>DATE:{{item.daily_date | date:"MM/dd/yyyy"}}</ion-label> -->
 <!-- <img src="http://localhost:3000/images/dailywork/{{item.image}}" alt="..."><br> -->
 <div class="a">
-<a href="http://localhost:3000/images/dailywork/{{item.pdf}}" target="_blank">DATE:{{item.daily_date | date:"MM/dd/yyyy"}}&nbsp;&nbsp;{{item.title}}</a>
+<a href="http://localhost:3000/images/dailywork/{{item.pdf}}" target="_blank">DATE:{{item.daily_date | date:"MM/dd/yyyy"}}&nbsp;&nbsp;{{item.fk_batch_id}}</a>
 </div>
 </div>
 </ion-content>

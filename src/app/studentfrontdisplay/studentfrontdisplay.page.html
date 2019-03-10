@@ -1,4 +1,3 @@
-
 <header>
     <div class="header-top">
         <div class="container">
@@ -91,7 +90,7 @@
 </header>
  
  <ion-content padding>
-   
+        
         <img src="http://localhost:3000/images/student_profile/{{student_image}}" alt="..." >
         
    <div  class="name"><ion-label>{{student_name}}</ion-label>  
@@ -107,16 +106,16 @@
               <div class="timer count-title count-number mt-2" data-to="9890" data-speed="1500"></div>
           </div>
       </div>
-      <div class="col-lg-3 col-md-6 mt-md-0 mt-sm-5 mt-3">
+      <div class="col-lg-3 col-md-6 mt-md-0 mt-sm-5 mt-3" (click)="onAttendance()">
           <div class="counter py-4 px-3 bg2-theme">
               <i> <ion-icon name="people"></ion-icon></i>
-              <p class="count-text text-capitalize" (click)="onAttendance()">ATTENDANCE</p>
+              <p class="count-text text-capitalize" >ATTENDANCE</p>
               <div class="timer count-title count-number mt-2" data-to="6799" data-speed="1500"></div>
           </div>
       </div>
 <br>
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6" (click)="onSchedule()">
           <div class="counter py-4 px-3 bg1-theme">
             
              <i> <ion-icon name="calendar"></ion-icon></i>
@@ -125,7 +124,7 @@
           </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 mt-md-0 mt-sm-5 mt-3" (click)="onNotice()">
+      <div class="col-lg-3 col-md-6 mt-md-0 mt-sm-5 mt-3" (click)="onNotice()" >
           <div class="counter py-4 px-3 bg2-theme">
               <i> <ion-icon name="notifications"></ion-icon></i>
               <p class="count-text text-capitalize">NOTICE</p>
@@ -136,11 +135,11 @@
 
       <br>
     
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6" (click)="onFees()" >
           <div class="counter py-4 px-3 bg1-theme">
             
              <i> <ion-icon name="cash"></ion-icon></i>
-              <p class="count-text text-capitalize" (click)="onFees()">FEE</p>
+              <p class="count-text text-capitalize" >FEE</p>
               <div class="timer count-title count-number mt-2" data-to="9890" data-speed="1500"></div>
           </div>
       </div>

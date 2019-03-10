@@ -38,6 +38,9 @@ const routes: Routes = [
   { path: 'pdf-open/:pdf', loadChildren: './pdf-open/pdf-open.module#PdfOpenPageModule' },
   { path: 'assignment', loadChildren: './assignment/assignment.module#AssignmentPageModule' },
   { path: 'assignmentdisplay/:subject_id', loadChildren: './assignmentdisplay/assignmentdisplay.module#AssignmentdisplayPageModule' },
+  { path: 'schedule', loadChildren: './schedule/schedule.module#SchedulePageModule' },
+  { path: 'scheduledisplay/:batch_id', loadChildren: './scheduledisplay/scheduledisplay.module#ScheduledisplayPageModule' },
+
 
   
 

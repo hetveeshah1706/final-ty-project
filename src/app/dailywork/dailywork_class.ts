@@ -1,6 +1,6 @@
 export class dailywork_class{
     constructor(
-       public student_id?:string,
+       public student_id?:number,
        public student_password?:string,
        public student_name?:string,
        public student_image?:string,

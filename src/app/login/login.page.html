@@ -59,7 +59,7 @@
                             <label>
                                 Email
                             </label>
-                            <input class="form-control"   type="text" id="student_id" placeholder="student id" [(ngModel)]="student_id" name="student_id" #id1="ngModel" required="" onkeypress="return isNumberKey(event)" >
+                            <input class="form-control"   type="text" id="student_id" placeholder="student id" [(ngModel)]="student_id" name="student_id" #id1="ngModel" required="" >
 
                                 <!-- <ion-input  type="text" id="student_id" required placeholder="student id" [(ngModel)]="student_id" name="student_id" #id1="ngModel"></ion-input> -->
                         </div>
@@ -189,9 +189,9 @@
     });
 </script>
 
-<script language=Javascript>
+<script >
         
-        function isNumberKey(evt)
+        function isNumber(evt)
         {
            var charCode = (evt.which) ? evt.which : event.keyCode
            if (charCode > 31 && (charCode < 48 || charCode > 57))

@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>schedule</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<ion-button *ngFor="let item of arr_batch"(click)="onBatch(item.batch_id)">{{item.batch_name}}
+</ion-button>
+</ion-content>

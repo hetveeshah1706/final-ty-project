@@ -12,7 +12,9 @@ export class StudentfrontdisplayserService {
   public url3:string='http://localhost:3000/student/';
   public url4:string='http://localhost:3000/studentionic/';
   public url5:string='http://localhost:3000/studentimage/';
+  public url6:string='http://localhost:3000/subject/';
   getstudentFront(student_id){
+    console.log(student_id);
     return this._http.get(this.url+student_id);
   }
   getstudentsubject(student_id){
@@ -21,6 +23,7 @@ export class StudentfrontdisplayserService {
   getStudentById(student_id){
     return this._http.get(this.url3+student_id);
   }
+  
   updateStudent(item:editprofile){
     let body=JSON.stringify(item);
     let head1=new HttpHeaders().set('Content-Type','application/json');

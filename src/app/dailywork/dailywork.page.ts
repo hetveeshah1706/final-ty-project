@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dailywork.page.scss'],
 })
 export class DailyworkPage implements OnInit {
-student_id:string;
+student_id:number;
 subject_arr:dailywork_class[]=[];
 onDailyWork(subject_id){
   this._route.navigate(['/dailysubjectdisplay',subject_id]);
@@ -18,7 +18,7 @@ onDailyWork(subject_id){
   constructor(public _ser:DailyworkService,public _route:Router) { }
 
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     console.log(this.student_id);
     this._ser.getDailyWorkSubject(this.student_id).subscribe(
       (data:dailywork_class[])=>{

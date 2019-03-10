@@ -7,14 +7,14 @@ import { FeesService } from '../fees.service';
   styleUrls: ['./totalfees.page.scss'],
 })
 export class TotalfeesPage implements OnInit {
-student_id:string;
+student_id:number;
 total_fees:number;
 paid_amount:number;
 student_name:string;
   constructor(private _ser:FeesService) { }
 
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     console.log(this.student_id);
     this._ser.ontotalfees(this.student_id).subscribe(
       (data:any)=>{

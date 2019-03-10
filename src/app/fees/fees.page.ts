@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./fees.page.scss'],
 })
 export class FeesPage implements OnInit {
-student_id:string;
+student_id:number;
   constructor(private _router:Router) { }
   ontotalfees(){
     this._router.navigate(['/totalfees']);
@@ -17,7 +17,7 @@ student_id:string;
   }
 
   ngOnInit() {
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     console.log(this.student_id);
   }
 

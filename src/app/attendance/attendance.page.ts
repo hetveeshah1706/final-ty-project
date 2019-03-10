@@ -11,7 +11,7 @@ import { removeDebugNodeFromIndex } from '@angular/core/src/debug/debug_node';
 })
 export class AttendancePage implements OnInit {
 eventSource=[];
-student_id:string;
+student_id:number;
 viewTitle:string;
 selectedDay=new Date();
 isToday: boolean;
@@ -31,7 +31,7 @@ calendar={
   ngOnInit() 
   {
 
-    this.student_id=localStorage.getItem('student_id');
+    this.student_id=parseInt(localStorage.getItem('student_id'));
     this._ser.onStudentAttendance(this.student_id).subscribe(
         (data:any[])=>{
             console.log(data);
