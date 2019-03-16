@@ -20,7 +20,7 @@ constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,pu
   {
     this._route.navigate(['/notice']);
   }
-  onSchedule(){
+  onSchedule(item){
     this._route.navigate(['/schedule']);
   }
   onAttendance()
@@ -41,6 +41,9 @@ constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,pu
   }
   onAssignment(){
     this._route.navigate(['/assignment']);
+  }
+  onExam(){
+    this._route.navigate(['/examschedule']);
   }
 
   ngOnInit() 

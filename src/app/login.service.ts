@@ -9,6 +9,7 @@ import { student_login } from './login/student_login';
 export class LoginService {
   public student_login:string="http://localhost:3000/studentlogin/";
   getLoginById(item:student_login){
+    console.log(item);
     let body=JSON.stringify(item)   ;
     let head1=new HttpHeaders().set('Content-Type','application/json');
     return this._http.post(this.student_login,body,{headers:head1});

@@ -31,6 +31,7 @@ calendar={
   ngOnInit() 
   {
 
+
     this.student_id=parseInt(localStorage.getItem('student_id'));
     this._ser.onStudentAttendance(this.student_id).subscribe(
         (data:any[])=>{

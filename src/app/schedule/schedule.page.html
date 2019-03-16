@@ -5,6 +5,20 @@
 </ion-header>
 <ion-content>
 
-<ion-button *ngFor="let item of arr_batch"(click)="onBatch(item.batch_id)">{{item.batch_name}}
-</ion-button>
+  <ion-card *ngFor="let item of schedule_arr">
+
+
+    <ion-card-header >
+      <ion-card-title>{{item.batch_name}}</ion-card-title>
+      <ion-card-title>Subject:{{item.subject_name}}</ion-card-title>
+      <ion-card-title>date:{{item.schedule_date}}</ion-card-title>
+      <ion-card-title>timings:{{item.timings}}</ion-card-title>
+    </ion-card-header>
+   
+
+    <!-- <ion-card-content>
+    vidhi
+    </ion-card-content> -->
+  </ion-card>
+
 </ion-content>

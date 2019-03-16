@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>examresult</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<table border="2">
+  <tr>
+<th>subject name</th>
+<th>total marks</th>
+<th>marks obtained</th>
+<th>date</th>
+</tr>
+<tr *ngFor="let item of exam_arr">
+  <td>{{item.subject_name}}</td>
+  <td>{{item.marks}}</td>
+  <td>{{item.marks_obtained}}</td>
+  <td>{{item.exam_date|date:"dd/MM/yyyy"}}</td>
+</tr>
+</table>
+</ion-content>
