@@ -3,6 +3,7 @@ import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 import { student_login } from './student_login';
 import { Storage } from "@ionic/storage";
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -11,7 +12,7 @@ import { Storage } from "@ionic/storage";
 export class LoginPage implements OnInit {
   student_id:string;
   student_password:string;
-  
+  hide:true;
   onForget(){
     this._router.navigate(['/forgetpass'])
   }
@@ -45,7 +46,9 @@ export class LoginPage implements OnInit {
   
   }
 
-  constructor(private _ser:LoginService,private _router:Router,private storage:Storage) { }
+  constructor(private _ser:LoginService,private _router:Router,private storage:Storage,private _menucntrl:MenuController) { 
+    this._menucntrl.enable(false);
+  }
 
   ngOnInit() {
   }

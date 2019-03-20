@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -39,7 +39,8 @@ const routes: Routes = [
   { path: 'assignment', loadChildren: './assignment/assignment.module#AssignmentPageModule' },
   { path: 'assignmentdisplay/:subject_id', loadChildren: './assignmentdisplay/assignmentdisplay.module#AssignmentdisplayPageModule' },
   { path: 'schedule', loadChildren: './schedule/schedule.module#SchedulePageModule' },
-  { path: 'scheduledisplay/:batch_id', loadChildren: './scheduledisplay/scheduledisplay.module#ScheduledisplayPageModule' },  { path: 'examresult', loadChildren: './examresult/examresult.module#ExamresultPageModule' },
+  { path: 'scheduledisplay/:batch_id', loadChildren: './scheduledisplay/scheduledisplay.module#ScheduledisplayPageModule' },
+  { path: 'examresult', loadChildren: './examresult/examresult.module#ExamresultPageModule' },
   { path: 'examschedule', loadChildren: './examschedule/examschedule.module#ExamschedulePageModule' },
 
 

@@ -1,211 +1,70 @@
-
-
-   
-
-
-<!-- <app-header></app-header> -->
-    <ion-content overflow-scroll="true">
-        <div class="list">
-
-
-
-
-
-
-<div class="row justify-content-center align-items-center no-gutters banner-agile">
-    <div class="col-lg-8">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item bg1 active">
-                    <div class="bnr-text-wthree">
-                        <h3 class="b-w3ltxt">the perfect theme for</h3>
-                        <p class="mx-auto text-capitalize mt-2 text-white">education and training center</p>
-                    </div>
-                </div>
-                <!-- slider text -->
-                <div class="carousel-item bg2">
-                    <div class="bnr-text-wthree">
-                        <h3 class="b-w3ltxt">the perfect theme for</h3>
-                        <p class="mx-auto text-capitalize mt-2 text-white">education and training center</p>
-                    </div>
-                </div>
-                <!-- slider text -->
-                <div class="carousel-item bg3">
-                    <div class="bnr-text-wthree">
-                        <h3 class="b-w3ltxt">the perfect theme for</h3>
-                        <p class="mx-auto text-capitalize mt-2 text-white">education and training center</p>
-                    </div>
-                </div>
-                <!-- slider text -->
-            </div>
-        </div>
-        <!-- Carousel -->
-        <!-- //banner -->
+<!-- <ion-content class="has-header">
+  <ion-card class="myCard">
+    <img src="../../assets/images/hero-bg.jpg">
+    <div class="myOverlay">
+       <div class="card-title">San Francisco</div>
+       <div class="card-subtitle">72 Listings</div>
     </div>
-    <div class="col-lg-4">
-        <div class="wthree-form">
-            <h4>Login to your account</h4>
-            <p class="login-sub">Let’s find a perfect course for you now!</p>
-            <form action=".html" method="get" class="register-wthree">
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="fas fa-envelope-open"></span>
-                            <label>
-                                Email
-                            </label>
-                            <input class="form-control"   type="text" id="student_id" placeholder="student id" [(ngModel)]="student_id" name="student_id" #id1="ngModel" required="" >
+  </ion-card>
+</ion-content> -->
 
-                                <!-- <ion-input  type="text" id="student_id" required placeholder="student id" [(ngModel)]="student_id" name="student_id" #id1="ngModel"></ion-input> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="fas fa-lock"></span>
-                            <label>
-                                password
-                            </label>
-                             <input type="password" class="form-control" placeholder="*******" name="Password" id="password" [(ngModel)]="student_password" name="password" #ps="ngModel"
-                                required=""> 
-                                <!-- <ion-input type="password" id="password" required placeholder="password" [(ngModel)]="student_password" name="password" #ps="ngModel"></ion-input> -->
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <button type="submit" class="btn btn-agile btn-block w-100" (click)="onLogin()">Login</button>
-                    </div>
-                    <br>
-                    <div class="mt-4">
-                        <button type="submit" class="btn btn-agile btn-block w-100" (click)="onForget()">forget</button>
-                    </div>
 
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
-        //-->
-     
-<!-- //carousel -->
-<!-- //banner -->
-<!-- footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="social-icons d-flex  my-auto justify-content-lg-start justify-content-center">
-                    <h2 class="mr-4">stay connected :</h2>
-                    <ul class="social-iconsv2 agileinfo">
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-google-plus-g"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6 my-lg-auto mt-3">
-                <div class="cpy-right text-lg-right text-center">
-                    <p class="text-secondary">© 2018 Skill Point. All rights reserved | Design by
-                        <a href="http://w3layouts.com"> W3layouts.</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- //footer -->
-<!-- js-->
-<script src="js/jquery-2.2.3.min.js"></script>
-<!-- loading-gif Js -->
-<script src="js/modernizr.js"></script>
-<script>
-    //paste this code under head tag or in a seperate js file.
-    // Wait for window load
-    $(window).load(function () {
-        // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
-    });
-</script>
-<!--// loading-gif Js -->
-<!-- Multiple select filter using jQuery -->
-<script src="js/custom-select.js"></script>
-<!-- //Multiple select filter using jQuery -->
-<!-- start-smooth-scrolling -->
-<script src="js/move-top.js">
-</script>
-<script src="js/easing.js"></script>
-<script>
-    jQuery(document).ready(function ($) {
-        $(".scroll").click(function (event) {
-            event.preventDefault();
 
-            $('html,body').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 1000);
-        });
-    });
-</script>
- 
-<!-- //end-smooth-scrolling -->
-<!-- smooth-scrolling-of-move-up -->
-<script>
-    $(document).ready(function () {
-        /*
-         var defaults = {
-           containerID: 'toTop', // fading element id
-           containerHoverID: 'toTopHover', // fading element hover id
-           scrollSpeed: 1200,
-           easingType: 'linear' 
-         };
-         */
 
-        $().UItoTop({
-            easingType: 'easeOutQuart'
-        });
+<ion-header>
+    
+    <ion-toolbar>
 
-    });
-</script>
-
-<script >
-        
-        function isNumber(evt)
-        {
-           var charCode = (evt.which) ? evt.which : event.keyCode
-           if (charCode > 31 && (charCode < 48 || charCode > 57))
-              return false;
+      <ion-title>LOGIN </ion-title>
+    </ion-toolbar>
+  </ion-header>
   
-           return true;
-        }
-        </script>
+  <ion-content   class="myCard"  padding>
+  
+        <img src="../../assets/images/ma1.png" style="border-radius: 50%;height:50px;width:100px;overflow: hidden;position: relative; font-size: 70px;">&nbsp;&nbsp; MATHS ACADEMY
+      
+        <div class="container">
+
+          
+               
+<mat-form-field hideRequiredMarker="true" class="form-container">
+  <input style="opacity: 100%;" matInput type="text"  required name="student_id"  #studentid="ngModel" [(ngModel)]="student_id" placeholder="Enter your Roll Number">
+  <mat-error  *ngIf="studentid.hasError('required')">its required</mat-error>
+   <mat-error *ngIf="!studentid.hasError('required')">email is invalid</mat-error>
+
+</mat-form-field>
+ 
 
 
-<script src="js/SmoothScroll.min.js"></script>
-<!-- //smooth-scrolling-of-move-up -->
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.js">
-</script>
-</div>
+            <mat-form-field>
+                    <input style="opacity: 1;" matInput type="password" name="student_password"  #studentpassword="ngModel" [(ngModel)]="student_password" required   placeholder="Enter your password" [type]="hide ? 'password' : 'text'" maxlength="10" hintLabel="Max 10 characters">
+                    <mat-error *ngIf="studentpassword.hasError('required')">its required</mat-error>
+                    <mat-error></mat-error> 
+                      <mat-hint align="end">{{studentpassword.value?.length || 0}}/10</mat-hint>
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                  </mat-form-field>
+                  
+                              
+                            
+                          
+                        
+                  
+                  
+                  
+                   
+    <!-- </div> -->
+
+
+
+<div class="row">
+    <div class="col-md-12">
+                              
+        <button mat-raised-button color="primary" (click)="onLogin()">SAVE</button>&nbsp;&nbsp;
+        </div>
+    </div>
+
+  </div>
+
+
 </ion-content>
