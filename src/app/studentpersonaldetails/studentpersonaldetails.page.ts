@@ -19,7 +19,9 @@ export class StudentpersonaldetailsPage implements OnInit {
   subject_arr:subject_class[]=[];
   subject_name:string;
   joining_date:string;
-  
+  onBack(){
+    this._router.navigate(['/studentfrontdisplay']);
+  }
   onEditProfile(){
     this._router.navigate(['/editprofile'])
   }

@@ -20,7 +20,9 @@ export class AssignmentdisplayPage implements OnInit {
    assignment_pdf:string;
   title:string;
   constructor(public _actroute:ActivatedRoute,public _ser:AssignmentService,public _router:Router) { }
-
+  onBack(){
+    this._router.navigate(['/studentfrontdisplay']);
+  }
   ngOnInit() {
     this.student_id=parseInt(localStorage.getItem('student_id'));
     this.subject_id=this._actroute.snapshot.params['subject_id'];

@@ -52,7 +52,7 @@ onUpdate()
     {
       //console.log(this.work_id,this.fk_standard_id);
       console.log(data);
-      // this._route.navigate(['/']);
+    this._route.navigate(['/studentpersonaldetails']);
     }
   )
 

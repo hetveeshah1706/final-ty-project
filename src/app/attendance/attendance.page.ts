@@ -3,6 +3,7 @@ import { NavController, ModalController, AlertController } from '@ionic/angular'
 import * as moment from 'moment';
 import { AttendanceService } from '../attendance.service';
 import { removeDebugNodeFromIndex } from '@angular/core/src/debug/debug_node';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-attendance',
@@ -24,7 +25,10 @@ calendar={
   mode:'month',
   currentDate:new Date()
 };
-  constructor(public navctrl:NavController,private modalctrl:ModalController,private _ser:AttendanceService,private alertctrl:AlertController) { }
+onBack(){
+    this._router.navigate(['/studentfrontdisplay']);
+  }
+  constructor(public navctrl:NavController,private modalctrl:ModalController,private _ser:AttendanceService,private alertctrl:AlertController,public _router:Router) { }
   loadEvents() {
     this.eventSource = this.createRandomEvents();
 }

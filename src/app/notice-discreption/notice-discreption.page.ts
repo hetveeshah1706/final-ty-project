@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NoticeserService } from '../noticeser.service';
 
 @Component({
@@ -13,7 +13,10 @@ notice_desc:string;
 notice_name:string;
 batch_name:string;
 notice_arr:[]=[];
-  constructor(private _actroute:ActivatedRoute,private _ser:NoticeserService) { }
+onBack(){
+  this._router.navigate(['/studentfrontdisplay']);
+}
+  constructor(private _actroute:ActivatedRoute,private _ser:NoticeserService,public _router:Router) { }
 
   ngOnInit() {
     this.notice_id=this._actroute.snapshot.params['notice_id'];

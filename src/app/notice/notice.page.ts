@@ -17,6 +17,9 @@ onClick(item)
 {
  this._route.navigate(['/notice-discreption',item.notice_id]);
 }
+onBack(){
+  this._route.navigate(['/studentfrontdisplay']);
+}
   ngOnInit() {
     
     this._ser.getAllNotice().subscribe(

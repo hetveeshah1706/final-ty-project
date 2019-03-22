@@ -5,7 +5,20 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-content padding>
-    <ion-button *ngFor="let item of subject_arr" (click)="onAssignment(item.subject_id)">{{item.subject_name}}</ion-button>
-  </ion-content>
+ 
+    <!-- <ion-button *ngFor="let item of subject_arr" (click)="onAssignment(item.subject_id)">{{item.subject_name}}</ion-button> -->
+    <ion-button *ngFor="let item of subject_arr" (click)="onClick()">{{item.subject_name}}</ion-button>
+  <div *ngIf="flag">
+    <ion-card *ngFor="let item of display_arr">
+      
+          <ion-icon name="download" class="a"></ion-icon>
+          <a class="b" href="http://localhost:3000/images/assignment/{{item.assignment_pdf}}" target="_self">SUBMISSION-DATE:{{item.submisson_date | date:"MM/dd/yyyy"}}<br>TITLE:{{item.title}}</a>
+            
+          
+    
+      
+    </ion-card>
+    </div>
+  
+  <ion-button (click)="onBack()">BACK</ion-button>
 </ion-content>  

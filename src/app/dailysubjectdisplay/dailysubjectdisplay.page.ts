@@ -12,6 +12,7 @@ import { dailywork_class } from '../dailywork/dailywork_class';
 export class DailysubjectdisplayPage implements OnInit {
  subject_id:number;
  student_id:number;
+ subject_name:string;
   public fk_standard_id:number;
         public fk_subject_id: number;
         public fk_batch_id: number;
@@ -20,6 +21,9 @@ export class DailysubjectdisplayPage implements OnInit {
         daily_date:Date;
         pdf:string;
         title:string;
+        onBack(){
+          this._router.navigate(['/studentfrontdisplay']);
+        }
   constructor(public _actroute:ActivatedRoute,public _ser:DailyworkService,public _router:Router) { }
 
   ngOnInit() {

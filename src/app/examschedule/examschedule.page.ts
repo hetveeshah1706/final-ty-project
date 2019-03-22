@@ -18,6 +18,9 @@ export class ExamschedulePage implements OnInit {
   onExamResult(){
     this._route.navigate(['/examresult'])
   }
+  onBack(){
+    this._route.navigate(['/studentfrontdisplay']);
+  }
 
   ngOnInit() {
     this.student_id=parseInt(localStorage.getItem('student_id'));

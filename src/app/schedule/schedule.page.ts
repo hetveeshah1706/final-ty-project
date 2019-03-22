@@ -17,6 +17,9 @@ schedule_arr:schedule[]=[];
 onBatch(batch_id){
   this._route.navigate(['/scheduledisplay',batch_id]);
 }
+onBack(){
+  this._route.navigate(['/studentfrontdisplay']);
+}
   constructor(private _ser:ScheduleService,private _route:Router) { }
 
   ngOnInit() {
