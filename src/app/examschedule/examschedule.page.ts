@@ -13,10 +13,17 @@ export class ExamschedulePage implements OnInit {
   student_id:number;
   batch_id:number;
   exam_sc_arr:examschedule[]=[];
+  flag:boolean=false;
+  exam_arr:examresult[]=[];
 
   constructor(private _ser:ExamresultService,private _route:Router) { }
   onExamResult(){
-    this._route.navigate(['/examresult'])
+    if(this.flag){
+      this.flag=false;
+    }
+    else{
+      this.flag=true;
+    }
   }
   onBack(){
     this._route.navigate(['/studentfrontdisplay']);
@@ -33,6 +40,12 @@ export class ExamschedulePage implements OnInit {
             this.exam_sc_arr=data;
           }
         )
+      }
+    )
+    this._ser.getResultByStudentId(this.student_id).subscribe(
+      (data:any[])=>{
+        console.log(data);
+        this.exam_arr=data;
       }
     )
     
