@@ -1,100 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title align="center">DESCRIPTION</ion-title>
+        <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<header>
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="d-flex header-agile">
-                        <li>
-                            <span class="fas fa-envelope-open"></span>
-                            <a href="mailto:example@email.com" class="text-white">info@example.com</a>
-                        </li>
-                        <li>
-                            <span class="fas fa-phone-volume"></span>
-                            <p class="d-inline text-white">+456 123 7890</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 hearder-right-agile">
-                    <div class="d-flex">
-                        
-                        <select class="custom-select">
-                            <option value="HTML">Programming</option>
-                            <option value="jQuery">Art & Design</option>
-                            <option value="Pug">Languages</option>
-                            <option value="SASS">UX Training</option>
-                            <option value="Angular">Business</option>
-                            <option value="React">Vocabulary</option>
-                            <option value="Jade">Photography</option>
-                            <option value="PHP">Inclusive-education</option>
-                            <option value="Java">New Technologies</option>
-                        </select>
-                        
-                        <div class="login-wthree my-auto">
-                            <button type="submit" class="text-pink text-capitalize" (click)="onLogin()">Login<span class="fas fa-sign-in-alt flash animated infinite"></span></button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header-bottom">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <h1><a class="navbar-brand" href="index.html">
-                        <span>S</span>kill
-                        <i class="w3-spacing"></i>
-                        <span>P</span>oint
-                    </a></h1>
-                <button class="navbar-toggler ml-lg-auto ml-sm-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav text-center ml-auto">
-                        <li class="nav-item active  mr-lg-3 mt-lg-0 mt-4">
-                            <a class="hover-fill" href="home.html" data-txthover="Home">Home</a>
-                        </li>
-                        <li class="nav-item  mr-lg-3 mt-lg-0 mt-4">
-                            <a class="hover-fill" href="about.html" data-txthover="About">about</a>
-                        </li>
-                        <li class="nav-item  mr-lg-3 mt-lg-0 mt-4">
-                            <a class="hover-fill" href="portfolio.html" data-txthover="Portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item dropdown mr-lg-3 my-lg-0 my-4">
-                            <a class=" hover-fill" data-txthover="Pages" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pages
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="hover-fill" href="services.html" data-txthover="Services">Services</a>
-                                <a class="hover-fill" href="pricingplans.html" data-txthover="Pricing Plans">Pricing
-                                    Plans</a>
-                                <a class="hover-fill" href="courses.html" data-txthover="Courses">Courses</a>
-                                <a class="hover-fill" href="single.html" data-txthover="Single Course">Single
-                                    Course</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="hover-fill" href="team.html" data-txthover="Team">Team</a>
-                                <a class="hover-fill" href="testimonials.html" data-txthover="Testimonials">Testimonials</a>
-                                <a class="hover-fill" href="typography.html" data-txthover="Typography">Typography</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="hover-fill" href="contact.html" data-txthover="Contact">contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-
 <ion-content padding>
     
     <ion-card style="background-color:rgb(255, 0, 128)">
@@ -107,7 +15,7 @@
          {{notice_desc}}
         </ion-card-content>
       </ion-card>
-      <ion-button (click)="onBack()">BACK</ion-button>
+      
       
       <!-- <ion-card>
         <ion-item>

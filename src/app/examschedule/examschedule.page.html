@@ -5,12 +5,17 @@
 </ion-header>
 
 <ion-content padding>
-  <h3 align="center">EXAM SCHEDULE</h3>
-<table border="3">
-  <th>batch name</th>
-  <th>subject name</th>
-  <th>date</th>
-  <th>total marks</th>
+<!-- <h3 align="center" class="c"><u> EXAM SCHEDULE </u></h3> -->
+
+  <h3 align="center" style="color:#10dc60;margin-top:5px;"><u><b>EXAM SCHEDULE</b></u></h3>
+
+<table class="a">
+  <tr>
+  <th>BATCH</th>
+  <th>SUBJECT</th>
+  <th>DATE</th>
+  <th>TOTAL</th>
+  </tr>
   <tr *ngFor="let item of exam_sc_arr">
     <td>{{item.batch_name}}</td>
     <td>{{item.subject_name}}</td>
@@ -18,14 +23,22 @@
     <td>{{item.marks}}</td>
   </tr>
 </table>
-<ion-button (click)="onExamResult()">results</ion-button>
+<br>
+
+  
+      <!-- <ion-fab-button color="medium" style="height: 90px;width:95px;margin-top:120px;margin-right: 15px; font-size:20px; font-family:Arial, Helvetica, sans-serif;" (click)="onExamResult()">
+        RESULTS
+      </ion-fab-button> -->
+      <ion-button color="medium" (click)="onExamResult()" style="margin-left:140px;">SHOW RESULT</ion-button>
+  <br>
 <div *ngIf="flag">
-    <table border="2">
+    <h3 align="center" style="color:#10dc60;"><u><b>EXAM RESULT</b></u></h3>
+    <table class="a">
         <tr>
-      <th>subject name</th>
-      <th>total marks</th>
-      <th>marks obtained</th>
-      <th>date</th>
+      <th>SUBJECT</th>
+      <th>TOTAL</th>
+      <th>MARKS</th>
+      <th>DATE</th>
       </tr>
       <tr *ngFor="let item of exam_arr">
         <td>{{item.subject_name}}</td>
@@ -35,6 +48,6 @@
       </tr>
       </table>
 </div>
-<ion-button (click)="onBack()">BACK</ion-button>
+
 </ion-content>
 

@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title align="center">ASSIGNMENT</ion-title>
+      <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
  
-    <!-- <ion-button *ngFor="let item of subject_arr" (click)="onAssignment(item.subject_id)">{{item.subject_name}}</ion-button> -->
-    <ion-button *ngFor="let item of subject_arr" (click)="onClick()">{{item.subject_name}}</ion-button>
+    <ion-button *ngFor="let item of subject_arr" (click)="onAssignment(item.subject_id)">{{item.subject_name}}</ion-button>
+   <ion-button *ngFor="let item of subject_arr" (click)="onClick()">{{item.subject_name}}</ion-button>
   <div *ngIf="flag">
     <ion-card *ngFor="let item of display_arr">
       
@@ -20,5 +20,8 @@
     </ion-card>
     </div>
   
-  <ion-button (click)="onBack()">BACK</ion-button>
+  
+
+
+  
 </ion-content>  
