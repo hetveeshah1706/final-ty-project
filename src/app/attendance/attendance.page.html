@@ -24,18 +24,22 @@
 
 
 
-
-
-
-
 <ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<!-- <ion-header>
         <ion-toolbar>
           <ion-title>ATTENDENCE</ion-title>
         </ion-toolbar>
         <ion-title>{{viewTitle}}</ion-title>
         
      
-</ion-header>
+</ion-header> -->
 <ion-content class="has-header">
     <calendar 
               [eventSource]="eventSource"
@@ -47,7 +51,7 @@
               (onTimeSelected)="onTimeSelected($event)"
               step="30">
     </calendar>
-    <ion-button (click)="onBack()">BACK</ion-button>
+    <!-- <ion-button (click)="onBack()">BACK</ion-button> -->
 </ion-content>
 
 

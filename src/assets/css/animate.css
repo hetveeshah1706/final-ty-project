@@ -7,7 +7,9 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2013 Daniel Eden
 */
 
-.animated {
+.animated 
+{
+
   -webkit-animation-duration: 2s;
   -ms-animation-duration: 2s;
   -o-animation-duration: 2s;
@@ -20,7 +22,8 @@ Copyright (c) 2013 Daniel Eden
   animation-fill-mode: both;
 }
 
-.animated.infinite {
+.animated.infinite 
+{
   -webkit-animation-iteration-count: infinite;
   -ms-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
@@ -28,7 +31,8 @@ Copyright (c) 2013 Daniel Eden
   animation-iteration-count: infinite;
 }
 
-.animated.hinge {
+.animated.hinge 
+{
   -webkit-animation-duration: 2s;
   -ms-animation-duration: 2s;
   -o-animation-duration: 2s;
@@ -36,8 +40,10 @@ Copyright (c) 2013 Daniel Eden
   animation-duration: 2s;
 }
 
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+@-webkit-keyframes bounce 
+{
+  0%, 20%, 50%, 80%, 100% 
+  {
 	-webkit-transform: translateY(0);
 	-ms- transform: translateY(0);
 	-o- transform: translateY(0);
@@ -45,9 +51,10 @@ Copyright (c) 2013 Daniel Eden
 	transform: translateY(0);
 }
 
-  40% {
+  40% 
+  {
     -webkit-transform: translateY(-30px);
-	-moz-transform: translateY(-30px);
+	  +-moz-transform: translateY(-30px);
     transform: translateY(-30px);
   }
 
@@ -66,13 +73,15 @@ Copyright (c) 2013 Daniel Eden
     transform: translateY(0);
   }
 
-  40% {
+  40% 
+  {
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     transform: translateY(-30px);
   }
 
-  60% {
+  60% 
+  {
     -webkit-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     transform: translateY(-15px);

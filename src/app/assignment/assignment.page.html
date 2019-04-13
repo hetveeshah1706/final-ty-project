@@ -1,20 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title align="center">ASSIGNMENT</ion-title>
+      <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content padding class="c">
+ 
     <!-- <ion-button *ngFor="let item of subject_arr" (click)="onAssignment(item.subject_id)">{{item.subject_name}}</ion-button> -->
-    <ion-button color="success" *ngFor="let item of subject_arr" (click)="onClick()" style="opacity:unset;">{{item.subject_name}}</ion-button>
+   <ion-button color="success" *ngFor="let item of subject_arr" (click)="onClick(item)">{{item.subject_name}}</ion-button>
   <div *ngIf="flag">
-    <ion-card *ngFor="let item of display_arr">
+    <ion-card *ngFor="let item of assignment_arr">
       
-          <ion-icon name="download" class="a"></ion-icon>
-          <a class="b" href="http://localhost:3000/images/assignment/{{item.assignment_pdf}}" target="_self"> <h4 class="o"> SUBMISSION-DATE:{{item.submisson_date | date:"MM/dd/yyyy"}}</h4><br>TITLE:{{item.title}}</a>
+          <!-- <ion-icon name="download" class="a"></ion-icon>
+          <a class="b" href="http://localhost:3000/images/assignment/{{item.assignment_pdf}}" target="_self">SUBMISSION-DATE:{{item.submisson_date | date:"MM/dd/yyyy"}}<br>TITLE:{{item.title}}</a> -->
             
-          
+          <a href="http://localhost:3000/images/assignment/{{item.pdf}}" target="_self" class="b"><ion-icon name="download" class="a"></ion-icon></a>
+            <h5 align="center">SUBMISSION:{{item.submisson_date | date:"MM/dd/yyyy"}}<br>TITLE:{{item.title}}</h5>
     
       
     </ion-card>
     </div>
+  
+  
+
+
+  
 </ion-content>  

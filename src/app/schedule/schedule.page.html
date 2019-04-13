@@ -1,18 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>schedule</ion-title>
+      <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content class="c">
-
+<div class="c">
+  <h1 style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size:30px;font-style: bold;"> <u>SCHEDULE</u></h1>
+</div>
   <ion-card *ngFor="let item of schedule_arr">
 
 
-    <ion-card-header >
+    <ion-card-header style="background-color:crimson;text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size:40px;font-style: bold;">
       <ion-card-title>{{item.batch_name}}</ion-card-title>
-      <ion-card-title>Subject:{{item.subject_name}}</ion-card-title>
-      <ion-card-title>date:{{item.schedule_date}}</ion-card-title>
-      <ion-card-title>timings:{{item.timings}}</ion-card-title>
+      <ion-card-title>{{item.subject_name}}</ion-card-title>
+      <ion-card-title>{{item.schedule_date | date:"MM/dd/yyyy"}}</ion-card-title>
+      <ion-card-title>{{item.timings}}</ion-card-title>
     </ion-card-header>
    
 
@@ -20,6 +22,6 @@
     vidhi
     </ion-card-content> -->
   </ion-card>
-  <ion-button (click)="onBack()">BACK</ion-button>
+  
 
 </ion-content>

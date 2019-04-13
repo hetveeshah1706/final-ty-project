@@ -22,6 +22,8 @@ import { MatInputModule,MatFormFieldControl,MatMenuModule, MatPaginatorModule,Ma
 //import { HeaderPage } from './header/header.page';
 import { IonicStorageModule } from "@ionic/storage";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Home1Component } from './home1/home1.component';
+import { LayoutModule } from '@angular/cdk/layout';
 //import { CalendarModule } from 'angular-calendar';
 //import { FormsModule } from '@angular/forms';
 //import { FlatpickrModule } from 'angularx-flatpickr';
@@ -32,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
+    Home1Component,
    
   ],
   entryComponents: [
@@ -73,7 +76,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     //CalendarModule.forRoot(),
     IonicStorageModule.forRoot(),
    
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+   
+    LayoutModule
     
     //HeaderPage
     //HeaderPage

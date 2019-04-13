@@ -1,16 +1,24 @@
 .a{
     height:80px;
     width:100px;
-    margin-left:60px;
+    margin-left:10px;
 }
 .b{
     color:black;
-    margin-left:60px;
+    margin-left:10px;
+    font-style: bold;
 }
 
 .c{
     --background: url('../../assets/images/watermark.jpg') no-repeat center center fixed;
-        background-size: cover;    
+        //background-size: cover;    
+        //background: rgba(0, 0, 0, 0.3);
         opacity: 0.5;
         text-align: center;
+   margin-left:10px;
 }
+// .c{
+//      --background: url('../../assets/images//watermark.jpg') no-repeat center center fixed;
+//    opacity:0.5;
+   
+// }

@@ -24,6 +24,9 @@ constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,pu
   {
     this._route.navigate(['/notice']);
   }
+  onAboutus(){
+    this._route.navigate(['/aboutus']);
+  }
   onSchedule(item)
   {
     this._route.navigate(['/schedule']);

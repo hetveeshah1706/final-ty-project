@@ -1,3 +1,4 @@
+
 <ion-header>
     
   <ion-toolbar>
@@ -6,29 +7,47 @@
   </ion-toolbar>
   
 </ion-header>
-<ion-content padding class="c">
 
-<ion-button (click)="ontotalfees()">total fees</ion-button>
-<ion-button (click)="onremainingfees()">fees paid</ion-button>
-<div *ngIf="flag">
-  <h1 align="center">TOTAL FEES</h1>
-  <table border="2">
+<ion-content padding >
+
+    
+  <div class="a">
+  <ion-row>
+    
+    <ion-col class="b">
+      <!-- <ion-button style="width:100%">paid fees</ion-button> -->
+      <ion-button color="medium" (click)="ontotalfees()"  style="width:90%;color:black;">TOTAL FEES</ion-button>
+    </ion-col>
+    <ion-col class="b">
+        <ion-button color="medium" (click)="onremainingfees()" style="width:90%">FEES PAID</ion-button>
+      <!-- <ion-button style="width:100%">due fees</ion-button> -->
+    </ion-col>
+   
+  
+
+</ion-row> 
+</div>
+
+<div *ngIf="flag" class="c">
+  <h1 align="center" style="color:rgb(242, 236, 248);margin-top:2px;" >TOTAL FEES</h1>
+  <table class="a1">
     <tr>
-      <th>name</th>
-      <th>totalfees</th>
-      <th>paid</th>
+      <th>NAME</th>
+      <th>TOTAL FEES</th>
+      <th>PAID FEES</th>
     </tr>
     <tr>
+        <td>{{student_name}}</td>
       <td>{{total_fees}}</td>
-      <td>{{student_name}}</td>
+      
       <td>{{paid_amount}}</td>
     </tr>
   </table>
   
 </div>
-<div *ngIf="flag1">
-    <h1 align="center">REMAINING FEES</h1>
-  <table >
+<div *ngIf="flag1" class="c">
+    <h1 align="center" style="color:rgb(242, 236, 248);margin-top:2px;" > REMAINING FEES  </h1>
+  <table  class="a1">
     <th>DATE</th>
 
     <th>AMOUNT</th>
@@ -45,3 +64,23 @@
 </div>
 
 </ion-content>
+
+
+
+<!-- <ion-content>
+   <ion-row>
+    
+      <ion-col>
+        <ion-button style="width:100%">paid fees</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button style="width:100%">due fees</ion-button>
+      </ion-col>
+     
+    
+  
+</ion-row> 
+
+
+</ion-content> -->
+

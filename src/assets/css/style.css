@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
     background: #fff;
 }
+.monthview-selected[_ngcontent-c6] {
+    background-color: hsl(343, 100%, 30%);
+    color: white;
+}
 
 body a,
 .btn-agile {

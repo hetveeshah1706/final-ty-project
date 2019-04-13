@@ -1,21 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>dailywork</ion-title>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding class="c">
   <!-- <ion-button *ngFor="let item of subject_arr" (click)="onDailyWork(item.subject_id)">{{item.subject_name}}</ion-button> -->
-  <ion-button color="success" *ngFor="let item of subject_arr" (click)="onClick()">{{item.subject_name}}</ion-button>
-  <div *ngIf="flag">
+  
+  <ion-button  color="success" *ngFor="let item of subject_arr" (click)="onClick(item)">{{item.subject_name}}</ion-button>
+  
+   <div>
     <ion-card *ngFor="let item of display_arr">
       
-          <ion-icon name="download" class="a"></ion-icon>
-            <a class="b" href="http://localhost:3000/images/dailywork/{{item.pdf}}" target="_self">DATE:{{item.daily_date | date:"MM/dd/yyyy"}}</a>
+          
+            <a href="http://localhost:3000/images/dailywork/{{item.pdf}}" target="_self" class="b"><ion-icon name="download" class="a"></ion-icon></a>
+            <h4 align="center">DATE:{{item.daily_date | date:"MM/dd/yyyy"}}</h4>
+    
             
           
     
       
     </ion-card>
     </div>
-</ion-content>
+  </ion-content>

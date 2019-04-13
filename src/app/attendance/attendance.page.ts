@@ -150,7 +150,7 @@ createRandomEvents() {
                 title: 'absent - ' + i,
                 startTime: startTime,
                 endTime: endTime,
-                allDay: false
+                allDay: false,
             });
         }
     }
