@@ -10,12 +10,19 @@
 }
 
 .c{
-    --background: url('../../assets/images/watermark.jpg') no-repeat center center fixed;
+   // --background: url('../../assets/images/watermark.jpg') no-repeat center center fixed;
         //background-size: cover;    
         //background: rgba(0, 0, 0, 0.3);
-        opacity: 0.5;
+    //    opacity: 0.5;
         text-align: center;
    margin-left:10px;
+   
+}
+.l
+{  
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
 }
 // .c{
 //      --background: url('../../assets/images//watermark.jpg') no-repeat center center fixed;

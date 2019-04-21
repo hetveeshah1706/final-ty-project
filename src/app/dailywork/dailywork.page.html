@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" align="left" (click)="onBack()"></ion-icon><img class="l" src="../../assets/images/maths.jpg"/>MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +14,7 @@
       
           
             <a href="http://localhost:3000/images/dailywork/{{item.pdf}}" target="_self" class="b"><ion-icon name="download" class="a"></ion-icon></a>
-            <h4 align="center">DATE:{{item.daily_date | date:"MM/dd/yyyy"}}</h4>
+            <h4 align="center">DATE:{{item.daily_date | date:"dd/MM/yyyy"}}</h4>
     
             
           

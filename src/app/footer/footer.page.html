@@ -1,14 +1,15 @@
-<html>
-<head>
-    <title>Check if Entered value is Number using JavaScript</title>
-</head>
-<body>
-    <div>
-        Enter only numbers with a Decimal value: 
-        <input type="text" id="tbNumbers" value="" onkeydown="return /[a-z]/i.test(event.key)"
-           >
-    </div>
-</body>
-
-
-</html>
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            ionic blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-slides *ngFor="let image of imagearray">
+    <ion-slide >
+    <img src=[{image.image}] height="50px" width="50px">
+    </ion-slide>
+    
+</ion-slides>
+</ion-content>

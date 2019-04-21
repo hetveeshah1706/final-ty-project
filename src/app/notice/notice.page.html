@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" slign="left" (click)="onBack()"></ion-icon><img class="l" src="../../assets/images/maths.jpg"/>MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
     <ion-card *ngFor="let item of notice_arr">
 
 
-        <ion-card-header >
+        <ion-card-header style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;">
           <ion-card-title>{{item.notice_name}}</ion-card-title>
           <ion-card-title>STANDARD:{{item.standard_no}}</ion-card-title>
         </ion-card-header>

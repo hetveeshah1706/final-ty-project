@@ -1,26 +1,44 @@
- <ion-header>
+<ion-header>
         <ion-toolbar>
           <ion-title align="center" style="font-family: Georgia, 'Times New Roman', Times, serif" >MATHS ACADEMY</ion-title>
         </ion-toolbar>
       </ion-header> 
       
  
- <ion-content padding>
+ <ion-content>
         
         <!-- <img src="http://localhost:3000/images/student_profile/{{student_image}}" alt="..." >
         
    <div  class="name"><ion-label>{{student_name}}</ion-label>  
     </div> -->
-  <br>
-  <div>
-<div class="a" (click)="onMyProfile()"> <h1><ion-icon style="font-size: 50px;margin-left: 40px;" name="person"></ion-icon></h1><h4 style="margin-left:10px;font-family: Georgia, 'Times New Roman', Times, serif;">MY PROFILE</h4></div>
-<div class="b" (click)="onAttendance()"> <h1><ion-icon name="people" style="font-size: 50px;margin-left: 40px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 2px;font-family: Georgia, 'Times New Roman';">ATTENDANCE</h4></div>
-<div class="c" (click)="onNotice()"> <h1><ion-icon name="notifications" style="font-size: 50px;margin-left: 40px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 90px;margin-top:-25px;font-family: Georgia, 'Times New Roman', Times, serif;">NEWS/NOTICE BOARD/EVENTS</h4></div>
-<div class="d" (click)="onSchedule()"> <h1><ion-icon name="calendar" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 25px;font-family: Georgia, 'Times New Roman', Times, serif;">SCHEDULE</h4></div>
-<div class="e" (click)="onFees()"> <h1><ion-icon name="cash" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 50px;font-family: Georgia, 'Times New Roman', Times, serif;">FEES</h4></div>
-<div class="f" (click)="onAssignment()"> <h1><ion-icon name="paper" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 120px;margin-top:-55px;font-family: Georgia, 'Times New Roman', Times, serif;">ASSIGNMENT</h4></div>
-<div class="g" (click)="onDailyWork()"> <h1><ion-icon name="book" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 25px;font-family: Georgia, 'Times New Roman', Times, serif;">DAILYWORK</h4></div>
-<div class="h" (click)="onExam()"> <h1><ion-icon name="school" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 50px;font-family: Georgia, 'Times New Roman', Times, serif;">EXAM</h4></div>
+  
+  <!-- <div>
+<div class="a" (click)="onMyProfile()"> <h1><ion-icon style="font-size: 50px;margin-left: 40px;" name="person"></ion-icon></h1><h4 style="margin-left:10px;">MY PROFILE</h4></div>
+<div class="b" (click)="onAttendance()"> <h1><ion-icon name="people" style="font-size: 50px;margin-left: 40px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 10px;">ATTENDANCE</h4></div>
+<div class="c" (click)="onNotice()"> <h1><ion-icon name="notifications" style="font-size: 50px;margin-left: 40px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 90px;margin-top:-25px;">NEWS/NOTICE BOARD/EVENTS</h4></div>
+<div class="d" (click)="onSchedule()"> <h1><ion-icon name="calendar" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 25px;">SCHEDULE</h4></div>
+<div class="e" (click)="onFees()"> <h1><ion-icon name="cash" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 50px;">FEES</h4></div>
+<div class="f" (click)="onAssignment()"> <h1><ion-icon name="paper" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 120px;margin-top:-55px;">ASSIGNMENT</h4></div>
+<div class="g" (click)="onDailyWork()"> <h1><ion-icon name="book" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 25px;">DAILYWORK</h4></div>
+<div class="h" (click)="onExam()"> <h1><ion-icon name="school" style="font-size: 50px;margin-left: 50px; margin-top: 20px;"></ion-icon></h1><h4 style="margin-left: 50px;">EXAM</h4></div>
+  </div> -->
+  <div class="row">
+        <div class="col a" (click)="onMyProfile()"> <h1><ion-icon style="font-size: 50px;margin-left: 40px;" name="person"></ion-icon></h1><h4 style="margin-left:10px;">MY PROFILE</h4></div>
+        <div class="col b" (click)="onAttendance()"> <h1><ion-icon name="people" style="font-size: 50px;margin-left:40px;"></ion-icon></h1><h4 style="margin-left: 10px;">ATTENDANCE</h4></div>
+  </div>
+  <div class="row">
+        <div class="col c" (click)="onNotice()"> <h1><ion-icon name="notifications" style="font-size: 50px;margin-left: 150px;"></ion-icon></h1><h4 style="margin-left: 90px;">NEWS/NOTICE BOARD/EVENTS</h4></div>
+  </div>
+  <div class="row">
+        <div class="col d" (click)="onSchedule()"> <h1><ion-icon name="calendar" style="font-size: 50px;margin-left: 50px;"></ion-icon></h1><h4 style="margin-left: 25px;">SCHEDULE</h4></div>
+        <div class="col e" (click)="onFees()"> <h1><ion-icon name="cash" style="font-size: 50px;margin-left: 50px;"></ion-icon></h1><h4 style="margin-left: 50px;">FEES</h4></div>
+  </div>
+  <div class="row">
+        <div class="col f" (click)="onAssignment()"> <h1><ion-icon name="paper" style="font-size: 50px;margin-left: 150px;"></ion-icon></h1><h4 style="margin-left: 120px;">ASSIGNMENT</h4></div>
+  </div>
+  <div class="row">
+        <div class="col g" (click)="onDailyWork()"> <h1><ion-icon name="book" style="font-size: 50px;margin-left: 50px;"></ion-icon></h1><h4 style="margin-left: 25px;">DAILYWORK</h4></div>
+        <div class="col h" (click)="onExam()"> <h1><ion-icon name="school" style="font-size: 50px;margin-left: 50px;"></ion-icon></h1><h4 style="margin-left: 50px;">EXAM</h4></div>
   </div>
   
       <!-- <div class="col-lg-3 col-md-6" (click)="onMyProfile()">
@@ -98,20 +116,6 @@
       </div> -->
 
     </ion-content>
-    <ion-tab-bar slot="bottom">
-
-            <ion-tab-button tab="home">
-              <ion-label>Home</ion-label>
-              <ion-icon (click)="onAboutus()" name="home"></ion-icon>
-              <ion-badge>6</ion-badge>
-            </ion-tab-button>
-        
-            <ion-tab-button tab="settings">
-              <ion-label>Settings</ion-label>
-              <ion-icon name="settings"></ion-icon>
-            </ion-tab-button>
-        
-          </ion-tab-bar>
 
 
 
@@ -119,4 +123,3 @@
 
 
 
- 

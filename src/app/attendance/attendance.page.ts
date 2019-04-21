@@ -52,14 +52,31 @@ onBack(){
                 console.log('date'+this.d);
                
                 console.log(data[i].attendance_date);
+                 if(data[i].attendance_status=='present')
+                 {
                   this.events.push({
                     title: data[i].attendance_status,
                     startTime: new Date(this.y,(this.m)-1,(this.d)+1,12,30,5,4),
                     endTime:new Date(this.y,(this.m)-1,(this.d)+1,13,30,5,4) ,
                     allDay: true,
+                    eventColor:'blue'
+                
+
                     
                 })
             }
+                else
+                {
+                    this.events.push({
+                        title: data[i].attendance_status,
+                        startTime: new Date(this.y,(this.m)-1,(this.d)+1,12,30,5,4),
+                        endTime:new Date(this.y,(this.m)-1,(this.d)+1,13,30,5,4) ,
+                        allDay: true,
+                        eventColor:'red'
+                    })
+                    
+                }
+             }
             this.eventSource=this.events;
             //this.eventSource.find((x)=>x.title=='');
            // let events=this.eventSource;
@@ -138,7 +155,8 @@ createRandomEvents() {
                 title: 'present - ' + i,
                 startTime: startTime,
                 endTime: endTime,
-                allDay: true
+                allDay: true,
+               
             });
         } else {
             var startMinute = Math.floor(Math.random() * 24 * 60);
@@ -151,6 +169,7 @@ createRandomEvents() {
                 startTime: startTime,
                 endTime: endTime,
                 allDay: false,
+               
             });
         }
     }

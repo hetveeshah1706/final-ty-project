@@ -1,17 +1,23 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif" align="center">MATHS ACADEMY</ion-title>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><img class="l" src="../../assets/images/maths.jpg"/>MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-<ion-label>STUDENT NAME</ion-label><ion-input type="text" name="student_name" [(ngModel)]="student_name"></ion-input><br>
-<ion-label>STUDENT PASSWORD</ion-label><ion-input type="text" name="student_password" [(ngModel)]="student_password"></ion-input><br>
+<ion-label>STUDENT NAME</ion-label>
+<ion-item>
+<ion-input type="text" name="student_name" [(ngModel)]="student_name"></ion-input></ion-item>
+
+<ion-label>STUDENT PASSWORD</ion-label>
+  <ion-item>
+<ion-input type="text" name="student_password" [(ngModel)]="student_password"></ion-input></ion-item>
 <ion-item>
     <ion-label>Date</ion-label>
+ 
     <ion-datetime display-format="MMM DD, YYYY " [(ngModel)]="date_of_birth"></ion-datetime>
   </ion-item>
-  <br>
+  
 <img src="http://localhost:3000/images/student_profile/{{student_image}}" alt="..." ><br>
   <input  type="file" (change)="onChange($event)"><br>
   <ion-button (click)="onUpdate()">UPDATE</ion-button>

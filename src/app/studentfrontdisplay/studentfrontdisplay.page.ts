@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StudentfrontdisplayserService } from '../studentfrontdisplayser.service';
 import { Storage } from "@ionic/storage";
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { IonSlides } from '@ionic/angular';
 @Component
 ({
   selector: 'app-studentfrontdisplay',
@@ -11,14 +12,30 @@ import { MenuController } from '@ionic/angular';
 })
 export class StudentfrontdisplayPage implements OnInit {
 
+  @ViewChild('mySlider', { read: IonSlides }) slides: IonSlides;
+
+  imagearray:string[]=[
+                        '../../assets/images/about.jpg',
+                        '../../assets/images/bg1.png',
+                        '../../assets/images/a1.jpg'
+                      ];
+  slider:IonSlides;
+
+  slidesDidLoad(mySlider:IonSlides)
+  {
+    this.slider=mySlider;
+    mySlider.startAutoplay();
+  }
 constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,public _route:Router,private menucntrl:MenuController) {
   this.menucntrl.enable(true);
+  
 
  }
   student_name:string;
   student_password:string;
   student_image:string;
   student_id:number;
+
   
   onNotice()
   {
@@ -59,7 +76,7 @@ constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,pu
   ngOnInit() 
   {
     this.student_id=parseInt(localStorage.getItem('student_id'));
-    this.student_id;
+   
     this._ser.getstudentFront(this.student_id).subscribe(
     (data:any[])=>
     { 

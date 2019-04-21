@@ -17,7 +17,7 @@
   (onEventSelected)="onEventSelected($event)"
   (onTitleChanged)="onTimeSelected($event)"
   step="30"
-  class="calendar"></calendar>
+  clvarass="calendar"></calendar>
 
 </ion-content> -->
 
@@ -26,23 +26,34 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" (click)="onBack()"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;MATHS ACADEMY</ion-title>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" align="left" (click)="onBack()"></ion-icon><img class="l" src="../../assets/images/maths.jpg"/>MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 
-<!-- <ion-header>
+<ion-header>
         <ion-toolbar>
           <ion-title>ATTENDENCE</ion-title>
         </ion-toolbar>
         <ion-title>{{viewTitle}}</ion-title>
         
      
-</ion-header> -->
-<ion-content class="has-header">
-    <calendar 
+</ion-header>
+
+<ion-content >
+     <ng-template  #template let-view="view"  let-row="row" let-col="col" >
+        <div  *ngFor="let obj of view.dates[row*7+col].events"  >
+            <p [ngStyle]="{'color': obj.eventColor}">{{view.dates[row*7+col].label}}</p>
+        </div> 
+</ng-template>
+
+
+        <calendar 
+        [monthviewDisplayEventTemplate]="template"
+              
               [eventSource]="eventSource"
+            
               [calendarMode]="calendar.mode"
               [currentDate]="calendar.currentDate"
               (onCurrentDateChanged)="onCurrentDateChanged($event)"
@@ -51,7 +62,43 @@
               (onTimeSelected)="onTimeSelected($event)"
               step="30">
     </calendar>
-    <!-- <ion-button (click)="onBack()">BACK</ion-button> -->
+
 </ion-content>
 
 
+
+
+
+    
+    <!-- <ion-button (click)="onBack()">BACK</ion-button> -->
+
+
+
+
+
+
+
+     <!-- <ng-template  #template let-view="view"  let-row="row" let-col="col" >
+        <div  *ngFor="let obj of view.dates[row*7+col].events"  >
+            <p [ngStyle]="{'color': obj.eventColor}">{{view.dates[row*7+col].label}}</p>
+        </div> 
+</ng-template>
+
+
+<ion-content>
+  <calendar   
+[monthviewDisplayEventTemplate]="template"
+[eventSource]="eventSource"
+[calendarMode]="calendar.mode"
+[currentDate]="calendar.currentDate"
+
+(onCurrentDateChanged)="onCurrentDateChanged($event)"
+(onEventSelected)="onEventSelected($event)"
+(onTitleChanged)="onViewTitleChanged($event)"
+(onTimeSelected)="onTimeSelected($event)"
+step="30">  
+</calendar>
+
+
+ 
+</ion-content> -->

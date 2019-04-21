@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.page.scss'],
 })
 export class FooterPage implements OnInit {
+  imagearray:any=[];
+  constructor() { 
+    this.imagearray=[{'image':'../../assets/images/a1.jpg'}];
+  }
 
-  constructor() { }
+  
 
   ngOnInit() {
   }
