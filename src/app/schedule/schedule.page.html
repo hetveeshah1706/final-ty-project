@@ -4,10 +4,10 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="c">
-<div class="c">
-  <h1 style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size:30px;font-style: bold;"> <u>SCHEDULE</u></h1>
-</div>
-  <ion-card *ngFor="let item of schedule_arr">
+<div class="c"> 
+  <h1 style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size:30px;font-weight: bolder;"> <u>SCHEDULE</u></h1>
+ </div>
+  <ion-card *ngFor="let item of schedule_arr" style="width:100%;">
 
 
     <ion-card-header style="background-color:crimson;text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size:40px;font-style: bold;">
@@ -18,10 +18,24 @@
     </ion-card-header>
    
 
+    
+  </ion-card>
+  
+  <!-- <ion-card style="width:100%;">
+
+
+    <ion-card-header style="background-color:crimson;text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size:40px;font-style: bold;">
+      <ion-card-title>8_B1</ion-card-title>
+      <ion-card-title>MATHS</ion-card-title>
+      <ion-card-title>11-10-2018</ion-card-title>
+      <ion-card-title>10:00 AM</ion-card-title>
+    </ion-card-header> -->
+   
+
     <!-- <ion-card-content>
     vidhi
     </ion-card-content> -->
-  </ion-card>
+  <!-- </ion-card> -->
   
 
 </ion-content>

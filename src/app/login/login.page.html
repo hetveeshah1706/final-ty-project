@@ -21,28 +21,34 @@
   </ion-header>
   <div class="m"> 
       <img src="../../assets/images/f.png"  class="user" >
-  <ion-content   class="loginbox"  padding>
+  <ion-content class="loginbox" padding>
   
         
 
     
-               
+<div style="margin-top:20px;margin-left:5px;">
+  
 <mat-form-field hideRequiredMarker="true" class="form-container">
-  <input matInput type="text"  required name="student_id"  #studentid="ngModel" [(ngModel)]="student_id" placeholder="Enter your Roll Number">
+
+  <input matInput type="text"  required name="student_id"  #studentid="ngModel" [(ngModel)]="student_id" placeholder="Enter your Roll Number" style="height:20px;">
+
   <mat-error  *ngIf="studentid.hasError('required')">its required</mat-error>
    <mat-error *ngIf="!studentid.hasError('required')">email is invalid</mat-error>
-
+  
 </mat-form-field>
- 
+
 
 
             <mat-form-field>
-                    <input matInput type="password" name="student_password"  #studentpassword="ngModel" [(ngModel)]="student_password" required   placeholder="Enter your password" [type]="hide ? 'password' : 'text'" maxlength="10" hintLabel="Max 10 characters">
+            
+                    <input matInput type="password" name="student_password"  #studentpassword="ngModel" [(ngModel)]="student_password" required   placeholder="Enter your password" [type]="hide ? 'password' : 'text'" maxlength="10" hintLabel="Max 10 characters" style="height:20px;">
+            
                     <mat-error *ngIf="studentpassword.hasError('required')">its required</mat-error>
                     <mat-error></mat-error> 
                       <mat-hint align="end">{{studentpassword.value?.length || 0}}/10</mat-hint>
 
                       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    
                   </mat-form-field>
                   
                               
@@ -56,9 +62,10 @@
     <!-- </div> -->
 
 
-                              
+                           
         <!-- <button mat-raised-button color="primary" (click)="onLogin()">LOGIN</button>&nbsp;&nbsp; -->
         <ion-button color="success" (click)="onLogin()" class="k"> LOGIN</ion-button>&nbsp;&nbsp;
+      </div>           
 </ion-content>
 </div>
 
