@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { url } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticeserService {
-  url:string="http://localhost:3000/multidelnotice/";
-  url1:string="http://localhost:3000/notice/"
+  url:string=url.endpoint+"multidelnotice/";
+  url1:string=url.endpoint+"notice/"
   constructor(public _http:HttpClient) { }
   getAllNotice(){
     return this._http.get(this.url);

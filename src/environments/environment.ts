@@ -5,6 +5,9 @@
 export const environment = {
   production: false
 };
+export const url={
+  endpoint:'http://mathsacademybackend.herokuapp.com/'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

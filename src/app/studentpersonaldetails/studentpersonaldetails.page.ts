@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentfrontdisplayserService } from '../studentfrontdisplayser.service';
 import { subject_class } from './subject_class';
 import { Router } from '@angular/router';
+import { url } from 'src/environments/environment';
 
 @Component({
   selector: 'app-studentpersonaldetails',
@@ -19,6 +20,7 @@ export class StudentpersonaldetailsPage implements OnInit {
   subject_arr:subject_class[]=[];
   subject_name:string;
   joining_date:string;
+  url_path=url.endpoint;
   onBack(){
     this._router.navigate(['/studentfrontdisplay']);
   }

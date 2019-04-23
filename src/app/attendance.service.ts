@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { url } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AttendanceService {
-  url:string="http://localhost:3000/attendancestudent/"
+  url:string=url.endpoint+"attendancestudent/"
 
   constructor(private _http:HttpClient) { }
   onStudentAttendance(student_id){

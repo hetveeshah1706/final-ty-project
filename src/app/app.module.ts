@@ -24,6 +24,7 @@ import { IonicStorageModule } from "@ionic/storage";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Home1Component } from './home1/home1.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FileOpener } from "@ionic-native/file-opener/ngx";
 //import { CalendarModule } from 'angular-calendar';
 //import { FormsModule } from '@angular/forms';
 //import { FlatpickrModule } from 'angularx-flatpickr';
@@ -85,6 +86,7 @@ import { LayoutModule } from '@angular/cdk/layout';
   ],
   providers: [
     StatusBar,
+    FileOpener,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

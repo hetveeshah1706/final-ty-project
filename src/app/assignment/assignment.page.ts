@@ -3,6 +3,7 @@ import { AssignmentService } from '../assignment.service';
 import { Router } from '@angular/router';
 import { assignment_class } from './assignment_class';
 import { assignment_display_class } from '../assignmentdisplay/assignment_display_class';
+import { url } from 'src/environments/environment';
 
 @Component({
   selector: 'app-assignment',
@@ -22,6 +23,7 @@ export class AssignmentPage implements OnInit {
    assignment_arr:assignment_class[]=[];
   title:string;
   flag:boolean=false;
+  assignmenturl:string=url.endpoint;
   constructor(public _ser:AssignmentService,public _route:Router) { }
   // onAssignment(subject_id){
   //   this._route.navigate(['/assignmentdisplay',subject_id]);
@@ -57,7 +59,10 @@ this._ser.getAssignmentIonicById(new assignment_display_class(this.fk_standard_i
 // }
   
   
-  
+onlciklink(item){
+  window.open(this.assignmenturl+"/images/assignment/"+item.pdf,"_system","location=yes");
+  // window.open(this.dailypdf+"/images/dailywork/"+item.pdf,"_system","location=yes");
+}
   onBack(){
     this._route.navigate(['/studentfrontdisplay']);
   }

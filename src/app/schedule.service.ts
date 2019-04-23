@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { url } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScheduleService {
-  url1:string="http://localhost:3000/scheduleionic/"
-  url2:string="http://localhost:3000/scheduleionic1/"
+  url1:string=url.endpoint+"scheduleionic/"
+  url2:string=url.endpoint+"scheduleionic1/"
   getAllBatch(){
     return this._http.get(this.url1);
 

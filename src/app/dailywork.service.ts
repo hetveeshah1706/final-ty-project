@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { displaydaily_class } from './dailywork/displaydaily_class';
+import { url } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DailyworkService {
-  public url:string='http://localhost:3000/dailyWorkIonic/';
-  public url1:string='http://localhost:3000/student/';
+  public url:string=url.endpoint+'dailyWorkIonic/';
+  public url1:string=url.endpoint+'student/';
   constructor(public _http:HttpClient) { }
   getDailyWorkSubject(student_id) {
     return this._http.get(this.url+student_id);

@@ -4,6 +4,8 @@ import { DailyworkService } from '../dailywork.service';
 import { subject_class } from '../studentpersonaldetails/subject_class';
 import { Router } from '@angular/router';
 import { displaydaily_class } from './displaydaily_class';
+import { url } from 'src/environments/environment';
+import { FileOpener } from "@ionic-native/file-opener/ngx";
 
 
 @Component({
@@ -28,6 +30,7 @@ today:Date=new Date();
 date1:Date;
 title:string;
 i:number;
+dailypdf=url.endpoint;
 onClick(item){
   if(this.flag){
       this.flag=false;
@@ -61,13 +64,19 @@ this._ser.getDailyworkIonicById(new displaydaily_class(this.fk_standard_id,item.
 );
 
 }
+
+onlciklink(item)
+{
+  // this.fileOpener.open("{{this.dailypdf}}/images/dailywork{{item.pdf}}","application").then(()=>alert("file is opened")).catch(e=>alert("error"+e));
+   window.open(this.dailypdf+"/images/dailywork/"+item.pdf,"_system","location=yes");
+}
 // onDailyWork(subject_id){
 //   this._route.navigate(['/dailysubjectdisplay',subject_id]);
 // }
 onBack(){
   this._route.navigate(['/studentfrontdisplay']);
 }
-  constructor(public _ser:DailyworkService,public _route:Router) { }
+  constructor(public _ser:DailyworkService,public _route:Router,private fileOpener:FileOpener) { }
 
   ngOnInit() {
     console.log(this.today);

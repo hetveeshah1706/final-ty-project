@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentfrontdisplayserService } from '../studentfrontdisplayser.service';
 import { Router } from '@angular/router';
 import { editprofile } from './editprofile';
+import { url } from 'src/environments/environment';
 
 @Component({
   selector: 'app-editprofile',
@@ -16,6 +17,10 @@ date_of_birth:Date;
 flag:boolean=false;
 selectedFile:File=null;
 student_password:string;
+url_path=url.endpoint;
+onBack(){
+  this._route.navigate(['/studentfrontdisplay']);
+}
 onChange(value)
   {
     this.flag=true;

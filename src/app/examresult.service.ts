@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { url } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ExamresultService {
-  student_exam:string="http://localhost:3000/studentresult/";
-  student_batch:string="http://localhost:3000/exambatch/";
-  exam_schedule:string="http://localhost:3000/examstudent/";
+  student_exam:string=url.endpoint+"studentresult/";
+  student_batch:string=url.endpoint+"exambatch/";
+  exam_schedule:string=url.endpoint+"examstudent/";
 
   constructor(private _http:HttpClient) { }
   getResultByStudentId(student_id){

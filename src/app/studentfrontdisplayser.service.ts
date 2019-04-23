@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { editprofile } from './editprofile/editprofile';
+import { url } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentfrontdisplayserService {
-  public url:string='http://localhost:3000/studentfrontdisplay/';
-  public url1:string='http://localhost:3000/student_subject_display/';
-  public url2:string='http://localhost:3000/studentfees/';
-  public url3:string='http://localhost:3000/student/';
-  public url4:string='http://localhost:3000/studentionic/';
-  public url5:string='http://localhost:3000/studentimage/';
-  public url6:string='http://localhost:3000/subject/';
+  public url:string=url.endpoint+'studentfrontdisplay/';
+  public url1:string=url.endpoint+'student_subject_display/';
+  public url2:string=url.endpoint+'studentfees/';
+  public url3:string=url.endpoint+'student/';
+  public url4:string=url.endpoint+'studentionic/';
+  public url5:string=url.endpoint+'studentimage/';
+  public url6:string=url.endpoint+'subject/';
   getstudentFront(student_id){
     console.log(student_id);
     return this._http.get(this.url+student_id);

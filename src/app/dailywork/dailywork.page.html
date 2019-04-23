@@ -13,7 +13,17 @@
     <ion-card *ngFor="let item of display_arr">
       
           
-            <a href="http://localhost:3000/images/dailywork/{{item.pdf}}" target="_self" class="b"><ion-icon name="download" class="a"></ion-icon></a>
+            
+    <!-- <object width=100% height=100% data="{{item.pdf}}"></object> -->
+  
+    <!-- <a class="b"><ion-icon name="download" class="a" src="{{dailypdf}}/images/dailywork/{{item.pdf}}"></ion-icon></a> -->
+    <!-- <a href="{{dailypdf}}/images/dailywork/{{item.pdf}}" cla-ss="b" target="_parent"><ion-icon name="download" class="a"></ion-icon></a> -->
+
+             <!-- <ion-button (click)="onlciklink(item)">xyz</ion-button> -->
+             <ion-icon name="download" class="a" (click)="onlciklink(item)"></ion-icon>
+
+            
+            
             <h4 align="center">DATE:{{item.daily_date | date:"dd/MM/yyyy"}}</h4>
     
             

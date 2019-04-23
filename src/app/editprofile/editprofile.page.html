@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><img class="l" src="../../assets/images/maths.jpg"/>MATHS ACADEMY</ion-title>
+    <ion-title style="font-family: Georgia, 'Times New Roman', Times, serif"><ion-icon name="arrow-back" slign="left" (click)="onBack()"></ion-icon><img class="l" src="../../assets/images/maths.jpg"/>MATHS ACADEMY</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
     <ion-datetime display-format="MMM DD, YYYY " [(ngModel)]="date_of_birth"></ion-datetime>
   </ion-item>
   
-<img src="http://localhost:3000/images/student_profile/{{student_image}}" alt="..." ><br>
+<img src="{{url_path}}/images/student_profile/{{student_image}}" alt="..." ><br>
   <input  type="file" (change)="onChange($event)"><br>
   <ion-button (click)="onUpdate()">UPDATE</ion-button>
 </ion-content>
