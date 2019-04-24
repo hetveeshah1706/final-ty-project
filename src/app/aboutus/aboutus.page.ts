@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutusPage implements OnInit {
 
-  constructor() { }
-
+  constructor(public _route:Router) { }
+  onBack(){
+    this._route.navigate(['/studentfrontdisplay']);
+  }
   ngOnInit() {
   }
 

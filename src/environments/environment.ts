@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false
+  
 };
 export const url={
   endpoint:'http://mathsacademybackend.herokuapp.com/'

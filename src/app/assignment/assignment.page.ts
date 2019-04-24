@@ -41,6 +41,7 @@ this._ser.getAssignmentIonicById(new assignment_display_class(this.fk_standard_i
   (data:assignment_display_class[])=>{
     console.log(data);
     this.assignment_arr=data;
+    console.log(this.assignment_arr);
  //   this.display_arr=data;
     
    
@@ -61,7 +62,8 @@ this._ser.getAssignmentIonicById(new assignment_display_class(this.fk_standard_i
   
 onlciklink(item){
   window.open(this.assignmenturl+"/images/assignment/"+item.pdf,"_system","location=yes");
-  // window.open(this.dailypdf+"/images/dailywork/"+item.pdf,"_system","location=yes");
+  // 
+  
 }
   onBack(){
     this._route.navigate(['/studentfrontdisplay']);

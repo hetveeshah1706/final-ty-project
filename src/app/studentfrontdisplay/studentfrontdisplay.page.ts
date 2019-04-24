@@ -36,7 +36,9 @@ constructor(public _ser:StudentfrontdisplayserService,private storage:Storage,pu
   student_image:string;
   student_id:number;
 
-  
+  onLogOut(){
+    this._route.navigate(['']);
+  }
   onNotice()
   {
     this._route.navigate(['/notice']);

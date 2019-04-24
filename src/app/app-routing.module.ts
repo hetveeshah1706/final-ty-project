@@ -43,7 +43,8 @@ const routes: Routes = [
   { path: 'examresult', loadChildren: './examresult/examresult.module#ExamresultPageModule' },
   { path: 'examschedule', loadChildren: './examschedule/examschedule.module#ExamschedulePageModule' },
   { path: 'aboutus', loadChildren: './aboutus/aboutus.module#AboutusPageModule' },
-  { path: 'contact-us', loadChildren: './contact-us/contact-us.module#ContactUsPageModule' },
+  { path: 'contact-us', loadChildren: './contact-us/contact-us.module#ContactUsPageModule' },  { path: 'help', loadChildren: './help/help.module#HelpPageModule' },
+
 
 
   

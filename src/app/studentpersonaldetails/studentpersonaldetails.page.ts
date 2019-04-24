@@ -21,6 +21,7 @@ export class StudentpersonaldetailsPage implements OnInit {
   subject_name:string;
   joining_date:string;
   url_path=url.endpoint;
+  flag:boolean=false;
   onBack(){
     this._router.navigate(['/studentfrontdisplay']);
   }
@@ -56,6 +57,7 @@ export class StudentpersonaldetailsPage implements OnInit {
         );
       }
     );
+    
     
   }
 
